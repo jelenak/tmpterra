@@ -11,7 +11,6 @@ variable "server_port" {
 data "aws_availability_zones" "all" {}
 
 resource "aws_launch_configuration" "example" {
-  # ami = "ami-40d28157"
   image_id = "ami-40d28157"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.instance.id}"]
