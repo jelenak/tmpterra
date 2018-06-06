@@ -2,10 +2,12 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
 variable "server_port" {
   description = "The port of the server will use for HTTP requests"
   default = 8080
 }
+
 
 resource "aws_instance" "example" {
   ami = "ami-40d28157"
